@@ -15,7 +15,7 @@
         .main{
             width: 100%;
             height: 100vh;
-            background: -webkit-linear-gradient(bottom, #00FF7F, #FFFAFA);
+            background: #E0FFFF;
             background-size: cover;
             background-position: center;
         }
@@ -79,7 +79,6 @@
     <body>
         <div class="main">
             <div class="navbar">
-                <label class="logo">BPJSTK </label > <img src="assets/back.jpg">
                 <ul>
                     <li><a href="home">Home</a></li>
                     <li><a href="about">About</a></li>

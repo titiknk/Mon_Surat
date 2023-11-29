@@ -7,9 +7,13 @@ use Illuminate\Http\Request;
 
 class SuratKeluarController extends Controller
 {
-    public function index(){
-        $suratkeluar = SuratKeluar::all();
-        return view('suratkeluar.index', compact(['suratkeluar']));
+    public function index(Request $request){
+        if($request){
+            $suratkeluar = SuratKeluar::where('tujuan_penerima','like', '%'.$request->cari.'%')->get();
+        }else{
+            $suratkeluar = SuratKeluar::all();
+        }
+        return view('suratkeluar.index', compact(['suratkeluar', 'request']));
     }
     public function create()
     {
